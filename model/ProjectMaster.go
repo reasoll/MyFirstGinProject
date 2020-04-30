@@ -2,9 +2,8 @@ package model
 
 type ProjectMaster struct {
 	BaseModel
-	ProjectName		string
+	ProjectName string
 }
-
 
 //Create
 func (this *ProjectMaster) Add() {
@@ -12,7 +11,7 @@ func (this *ProjectMaster) Add() {
 }
 
 //Update or Create
-func (this *ProjectMaster) Update()  {
+func (this *ProjectMaster) Update() {
 	if this.ID != 0 {
 		db.Save(this)
 	} else {
@@ -21,10 +20,9 @@ func (this *ProjectMaster) Update()  {
 }
 
 //Retire
-func (this ProjectMaster) get() {
-	db.Find(ProjectMaster{})
+func (this ProjectMaster) GetProjectMasterById(id int) (projectMaster ProjectMaster) {
 
+	db.First(&projectMaster, id)
+
+	return
 }
-
-
-

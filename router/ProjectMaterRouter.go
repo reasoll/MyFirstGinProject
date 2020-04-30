@@ -1,13 +1,9 @@
 package router
 
-import (
-	"github.com/gin-gonic/gin"
-)
+import "MyFirstGinProject/controller/ProjectController"
 
 func ProjectMasterRouter(base string) {
 	r := Router.Group("/" + base)
 
-	r.GET("/get", func(context *gin.Context) {
-
-	})
+	r.GET("/get/:id", ProjectController.GetProjectMaster)
 }
