@@ -24,5 +24,8 @@ func NewRouter() *gin.Engine {
 	Router = r
 	ProjectMasterRouter("project")
 	QuestionMasterRouter("question")
+	AnswerMasterRouter("answermaster")
+	WholeProjectRouter("whole")
+
 	return Router
 }

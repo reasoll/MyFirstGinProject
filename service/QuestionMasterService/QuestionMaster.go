@@ -10,5 +10,5 @@ func GetQuestionMasterList() []model.QuestionMaster {
 
 func GetQuestionMasterById(id int) []model.QuestionMaster {
 
-	return GetQuestionMasterById(id)
+	return model.QuestionMaster{}.GetQuestionMasterById(id)
 }

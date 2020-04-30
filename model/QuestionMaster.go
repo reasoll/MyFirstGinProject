@@ -14,8 +14,11 @@ func (this QuestionMaster) GetQuestionMasterAll() (questionMasterList []Question
 	return
 }
 
+/**
+根据Project_id获取Question
+*/
 func (this QuestionMaster) GetQuestionMasterById(id int) (questionMasterList []QuestionMaster) {
 
-	db.Where("project_id = ?", id).Find(questionMasterList)
+	db.Where("project_id = ?", id).Find(&questionMasterList)
 	return
 }
