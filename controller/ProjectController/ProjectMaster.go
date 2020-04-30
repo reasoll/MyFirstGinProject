@@ -15,3 +15,9 @@ func GetProjectMaster(c *gin.Context) {
 	c.JSON(200, pm)
 
 }
+
+func GetProjectMasterList(c *gin.Context) {
+
+	pmList := ProjectMasterService.GetProjectMasterList()
+	c.JSON(200, pmList)
+}

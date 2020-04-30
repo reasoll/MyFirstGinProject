@@ -14,17 +14,15 @@ func NewRouter() *gin.Engine {
 	r.Use(middleware.Cors())
 
 	r.GET("/ping", func(context *gin.Context) {
-		context.Writer.WriteString("Pong")
-
-
+		_, _ = context.Writer.WriteString("Pong")
 	})
 
-
 	r.NoRoute(func(context *gin.Context) {
-		context.Writer.WriteString("对不起，页面不存在！！！")
+		_, _ = context.Writer.WriteString("对不起，页面不存在！！！")
 	})
 
 	Router = r
-	ProjectMasterRouter("project");
+	ProjectMasterRouter("project")
+	QuestionMasterRouter("question")
 	return Router
 }

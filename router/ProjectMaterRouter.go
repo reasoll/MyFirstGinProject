@@ -6,4 +6,6 @@ func ProjectMasterRouter(base string) {
 	r := Router.Group("/" + base)
 
 	r.GET("/get/:id", ProjectController.GetProjectMaster)
+
+	r.GET("/getall", ProjectController.GetProjectMasterList)
 }

@@ -26,3 +26,10 @@ func (this ProjectMaster) GetProjectMasterById(id int) (projectMaster ProjectMas
 
 	return
 }
+
+//获取所有问卷
+func (this ProjectMaster) GetProjectMasterList() (projectMasterList []ProjectMaster) {
+
+	db.Find(&projectMasterList)
+	return
+}
