@@ -8,4 +8,6 @@ func WholeProjectRouter(base string) {
 
 	r.GET("/getbyid/:id", controller.GetWholeProjectById)
 
+	r.POST("/createsurvey", controller.CreateSurvey)
+
 }
